@@ -35,3 +35,15 @@ Overall, when developing an application in Unity, it's important to prioritize t
 Regading code, some functions can be globilized to be reusable making the app a bit more optimized, having a global accessible file called 'utils/utils' could be useful for this purpose.
 Icons were used to keep ui clean and simple, aided with simple text to help user identify the different buttons.
 Due to time constraints responsivnes was not considered for this excercise, making the app usable in PC but not in other devices.
+
+Due to Unity's treatment of git locked files, use the current `.gitignore` file for future projects as template. 
+
+## TODO
+
+1. Get input for user
+2. Use user input to set desired timer
+	+ Timer can be 15s maximum
+	+ Timer set on enter
+	+ Timer can be paused/stopped/reset
+3. Fix timer and stopwatch bug
+	+ when timer or stopwatch is stopped, when retsetting time it is not reflected until user clicks play again.
