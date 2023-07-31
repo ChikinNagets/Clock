@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ResetButtonScript : MonoBehaviour
 {
-
-    public Button resetButton;
     public clock clockComponent;
+    public Button resetButton;
+    public TimerButtonScript timerButton;
+    public TMP_InputField userInputValue;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +26,17 @@ public class ResetButtonScript : MonoBehaviour
 
     private void resetTime()
     {
+        string userInput = "";
+        if (userInputValue.text != string.Empty) {
+            userInput = userInputValue.text;
+        } else
+        {
+            userInput = "15";
+        }
+        Console.WriteLine(userInput);
         if (clockComponent.isTimer)
         {
-            clockComponent.timeValue = 15;
+            timerButton.TextMeshUpdated(userInput);
         } else if (clockComponent.isStopwatch)
         {
             clockComponent.timeValue = 0;
