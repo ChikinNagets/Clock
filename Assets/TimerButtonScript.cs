@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,11 +39,15 @@ public class TimerButtonScript : MonoBehaviour
         clockComponent.DisplayTime(clockComponent.timeValue);
     }
 
-    private void TextMeshUpdated(String value) 
+    public void TextMeshUpdated(String value) 
     {
-        if (value != null && Int32.Parse(value) <= timerConstant)
+        int userValue = Convert.ToInt32(value);
+        if (value != null && userValue <= timerConstant)
         {
-            clockComponent.timeValue = (float)Convert.ToDouble(value);
+            clockComponent.timeValue = userValue;
+        } else
+        {
+            clockComponent.timeValue = timerConstant;
         }
     }
     private void activateUi()
