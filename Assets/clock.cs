@@ -27,7 +27,7 @@ public class clock : MonoBehaviour
     public Button stopButton;
     public Button resetButton;
 
-    public bool isTimerOn = false;
+    public bool isTimerOn;
 
     // Start is called before the first frame update
     void Start()

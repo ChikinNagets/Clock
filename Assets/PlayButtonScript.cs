@@ -22,5 +22,5 @@ public class PlayButtonScript : MonoBehaviour
     }
 
     //Start Timer countdown
-    public void callTimer() => timerButton.startTimer(true);
+    public void callTimer() => timerButton.triggerTimer(true);
 }

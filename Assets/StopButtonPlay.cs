@@ -20,5 +20,5 @@ public class StopButtonPlay : MonoBehaviour
         
     }
 
-    public void callTimer() => timerButton.stopTimer(false);
+    public void callTimer() => timerButton.triggerTimer(false);
 }
