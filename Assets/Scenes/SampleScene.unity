@@ -1162,8 +1162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a9ec055194a224bad96fc94a8a39a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetButton: {fileID: 1023059939}
   clockComponent: {fileID: 197666911}
+  resetButton: {fileID: 1023059939}
+  timerButton: {fileID: 1425699522}
+  userInputValue: {fileID: 1093485587}
 --- !u!1 &1051534361
 GameObject:
   m_ObjectHideFlags: 0

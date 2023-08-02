@@ -47,4 +47,5 @@ Due to Unity's treatment of git locked files, use the current `.gitignore` file 
 	+ ~Timer can be paused/stopped/reset~
 	+ ~Timer is reset to user input~
 3. Fix timer and stopwatch bug
-	+ ~when timer or stopwatch is stopped, when retsetting time it is not reflected until user clicks play again.~
+	+ ~when timer or stopwatch is stopped, when retsetting time it is not reflected until user clicks play again.~\
+	+ when timer reaches zero counter continues to negative numbers.
