@@ -33,15 +33,22 @@ public class TimerButtonScript : MonoBehaviour
 
         if (clockComponent.isTimer == true && clockComponent.isTimerOn == true)
         {
-            // Update timer value tickdown if isTimer is true
-            clockComponent.timeValue -= Time.deltaTime;
+            if (clockComponent.timeValue > 0)
+            {
+                // Update timer value tickdown if isTimer is true
+                clockComponent.timeValue -= Time.deltaTime;
+            } else
+            {
+                clockComponent.timeValue = 0;
+                triggerTimer(false);
+            }
         }
         clockComponent.DisplayTime(clockComponent.timeValue);
     }
 
     public void TextMeshUpdated(String value) 
     {
-        int userValue = Convert.ToInt32(value);
+        float userValue = value != string.Empty ? float.Parse(value) : 15;
         if (value != null && userValue <= timerConstant)
         {
             clockComponent.timeValue = userValue;

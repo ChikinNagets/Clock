@@ -26,17 +26,9 @@ public class ResetButtonScript : MonoBehaviour
 
     private void resetTime()
     {
-        string userInput = "";
-        if (userInputValue.text != string.Empty) {
-            userInput = userInputValue.text;
-        } else
-        {
-            userInput = "15";
-        }
-        Console.WriteLine(userInput);
         if (clockComponent.isTimer)
         {
-            timerButton.TextMeshUpdated(userInput);
+            timerButton.TextMeshUpdated(userInputValue.text);
         } else if (clockComponent.isStopwatch)
         {
             clockComponent.timeValue = 0;
